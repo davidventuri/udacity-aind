@@ -32,7 +32,7 @@ To visualize your solution, please only assign values to the values_dict using t
 
 The data consists of a text file of diagonal sudokus for you to solve.
 
-## Questions for evaluation
+## Questions for Evaluation
 
 ### Question 1 (Naked Twins)
 **Q:** How do we use constraint propagation to solve the naked twins problem?  
