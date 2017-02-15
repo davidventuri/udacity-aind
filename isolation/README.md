@@ -97,8 +97,3 @@ The tournament opponents are listed below. (See also: sample heuristics and play
 - AB_Null: CustomPlayer agent using fixed-depth alpha-beta search and the null_score heuristic
 - AB_Open: CustomPlayer agent using fixed-depth alpha-beta search and the open_move_score heuristic
 - AB_Improved: CustomPlayer agent using fixed-depth alpha-beta search and the improved_score heuristic
-
-
-## Submitting
-
-Your project is ready for submission when it meets all requirements of the project rubric.  Your code is finished when it passes all unit tests, and you have successfully implemented a suitable heuristic function.
