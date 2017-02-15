@@ -4,19 +4,6 @@
 1. Implement the Sudoku technique called "naked twins"
 2. Modify your code to solve a diagonal Sudoku
 
-### Install
-
-This project requires **Python 3**.
-
-We recommend students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project. 
-Please try using the environment we provided in the Anaconda lesson of the Nanodegree.
-
-##### Optional: Pygame
-
-Optionally, you can also install pygame if you want to see your visualization. If you've followed our instructions for setting up our conda environment, you should be all set.
-
-If not, please see how to download pygame [here](http://www.pygame.org/download.shtml).
-
 ### Code
 
 * `solutions.py` - You'll fill this in as part of your solution.
@@ -41,3 +28,18 @@ The data consists of a text file of diagonal sudokus for you to solve.
 ### Question 2 (Diagonal Sudoku)
 **Q:** How do we use constraint propagation to solve the diagonal sudoku problem?  
 **A:** All that is required to solve the diagonal sudoku problem is to introduce two new units - one for each diagonal - and to add them to our unit list. Two new constraints are created: the digits 1-9 must appear only once in each of these new units. Each box along the diagonal now belongs to another unit and now has new peers. The strategies (in this project's case: elimination, only choice, and naked twins) do not change, there is just another set of constraints to enforce. More specifically, more units and peers of which to be aware. We continue the process of enforcing a constraint to reduce the search space to enforce more constraints to find a solution.
+
+## Software Requirements
+
+### Install
+
+This project requires **Python 3**.
+
+We recommend students install [Anaconda](https://www.continuum.io/downloads), a pre-packaged Python distribution that contains all of the necessary libraries and software for this project. 
+Please try using the environment we provided in the Anaconda lesson of the Nanodegree.
+
+##### Optional: Pygame
+
+Optionally, you can also install pygame if you want to see your visualization. If you've followed our instructions for setting up our conda environment, you should be all set.
+
+If not, please see how to download pygame [here](http://www.pygame.org/download.shtml).
