@@ -115,7 +115,6 @@ def play_round(agents, num_matches):
     print("----------")
 
     # Everything except the last agent in agents
-    # http://stackoverflow.com/questions/509211/explain-pythons-slice-notation
     for idx, agent_2 in enumerate(agents[:-1]):
 
         counts = {agent_1.player: 0., agent_2.player: 0.}
@@ -125,7 +124,6 @@ def play_round(agents, num_matches):
 
         # Each player takes a turn going first
         for p1, p2 in itertools.permutations((agent_1.player, agent_2.player)):
-            # Do this five times (we don't use / care about the index "_" though)
             for _ in range(num_matches):
                 score_1, score_2 = play_match(p1, p2)
                 counts[p1] += score_1
@@ -174,8 +172,6 @@ def main():
     for agentUT in test_agents:
         print("")
         print("*************************")
-        # For formatting string. Centering value in this case.
-        # http://infohost.nmt.edu/~shipman/doc/python27/web/new-str-format.html
         print("{:^25}".format("Evaluating: " + agentUT.name))
         print("*************************")
 

@@ -256,12 +256,6 @@ if __name__ == "__main__":
 
     # play the remainder of the game automatically -- outcome can be "illegal
     # move" or "timeout"; it should _always_ be "illegal move" in this example
-
-    # Why always illegal move in this example? Because RandomPlayer and GreedyPlayer
-    # will always generate (-1, -1), which is not in the legal moves
-    # This goes to my q: Shouldn't there be a case for "ran out of moves...player x loses,"
-    # which we would put in the RandomPlayer/etc. classes? Or maybe no, because (-1, -1)
-    # is the signal for ran out of moves...but it could also be human player entered bad move
     winner, history, outcome = game.play()
     print("\nWinner: {}\nOutcome: {}".format(winner, outcome))
     print(game.to_string())
