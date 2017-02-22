@@ -49,9 +49,6 @@ class Board(object):
         self.__player_2__ = player_2
         self.__active_player__ = player_1
         self.__inactive_player__ = player_2
-        # Shouldn't this be i in range(height), j in range(width) as per get_blank_spaces
-        # No, because the list comprehension generates one row at a time (i.e. fills in the
-        # columns for each row first)
         self.__board_state__ = [[Board.BLANK for i in range(width)] for j in range(height)]
         self.__last_player_move__ = {player_1: Board.NOT_MOVED, player_2: Board.NOT_MOVED}
         self.__player_symbols__ = {Board.BLANK: Board.BLANK, player_1: 1, player_2: 2}
@@ -291,7 +288,8 @@ class Board(object):
 
             for j in range(self.width):
 
-                # If the current board position we're looping through is 0 (still initialized value)
+                # If the current board position we're looping through is 0,
+                # i.e., unchanged from initialized value
                 if not self.__board_state__[i][j]:
                     out += ' '
                 # Else if it is currently occupied by player 1
@@ -342,16 +340,14 @@ class Board(object):
             curr_move = self.active_player.get_move(game_copy, legal_player_moves, time_left)
             move_end = time_left()
 
-            # print move_end
-
             if curr_move is None:
                 curr_move = Board.NOT_MOVED
 
             if self.active_player == self.__player_1__:
                 move_history.append([curr_move])
             else:
-                # Append the current move to the last entry in the current move list
-                # I.e. for second player
+                # Append the current move to the last entry in the current
+                # move list, i.e., for the second player
                 move_history[-1].append(curr_move)
 
             if move_end < 0:

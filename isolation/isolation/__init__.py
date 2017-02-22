@@ -7,14 +7,6 @@ location is blocked for the rest of the game. The first player with no
 legal moves loses, and the opponent is declared the winner.
 """
 
-# http://mikegrouchy.com/blog/2012/05/be-pythonic-__init__py.html
-# Sole purpose of __init__.py is to indicate a directory is a module
-
-# A module is a Python object with arbitrarily named attributes that you can
-# bind and reference. Simply, a module is a file consisting of Python code.
-# A module can define functions, classes and variables. A module can also
-# include runnable code.
-
 import io
 
 # Make the Board class available at the root of the module for imports
